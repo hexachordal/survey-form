@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="main.js"></script>
+</head>
+<body>
+    
+<div>
+    <h1 id="title">Beau Survey</h1>
+    <p id="description">This survey is to help inform us of what you think Beau likes.</p>
+    <form id="survey-form">
+      <label id="name-label" for="name">Enter your name</label><br>
+      <input id="name" name="name" type="text" placeholder="Full Name" required onfocus="toggleName()" onblur="toggleName()"><br><br>
+      <label id="email-label" for="email">Enter your email</label><br>
+      <input id="email" name="email" type="email" placeholder="email address" required onfocus="toggleEmail()" onblur="toggleEmail()"><br><br>
+      <label id="number-label" for="number">Enter your phone number</label><br>
+      <input id="number" name="number" type="number" placeholder="phone number" min="1111111111" max="99999999999" required onfocus="togglePhoneNumber()" onblur="togglePhoneNumber()"><br><br>
+      <script>
+        function toggleName() {
+          if (document.getElementById("name").placeholder === "Full Name") {
+            document.getElementById("name").placeholder = ""
+          } else {
+            document.getElementById("name").placeholder = "Full Name"
+          }
+        }
+    
+        function toggleEmail() {
+          if (document.getElementById("email").placeholder === "email address") {
+            document.getElementById("email").placeholder = ""
+          } else {
+            document.getElementById("email").placeholder = "email address"
+          }
+        }
+    
+        function togglePhoneNumber() {
+          if (document.getElementById("number").placeholder === "phone number") {
+            document.getElementById("number").placeholder = ""
+          } else {
+            document.getElementById("number").placeholder = "phone number"
+          }
+        }
+    
+        function toggleComments() {
+          if (document.getElementById("comments").placeholder === "Enter your comment here...") {
+            document.getElementById("comments").placeholder = ""
+          } else {
+            document.getElementById("comments").placeholder = "Enter your comment here..."
+          }
+        }
+      </script>
+    
+      <label for="dropdown">Beau's best quality</label><br>
+      <select id="dropdown">
+        <option value="" disabled selected>Select quality</option>
+        <option value="cuddly">Cuddly</option>
+        <option value="playful">Playful</option>
+        <option value="loyal">Loyal</option>
+    
+      </select><br><br>
+      <section id="beau-knows">
+      Words Beau knows:<br>
+      <label>
+        <input type="checkbox" name="beau-words" value="squirrel">squirrel
+      </label><br>
+      <label>
+        <input type="checkbox" name="beau-words" value="treat">treat
+      </label><br>
+      <label>
+        <input type="checkbox" name="beau-words" value="outside">outside
+      </label><br>
+      <label>
+        <input type="checkbox" name="beau-words" value="sit">sit
+      </label>
+      </section>
+      <br><br>
+      Favorite thing about Beau:<br>
+      <label>
+        <input type="radio" name="fav-thing" value="fluffiness">fluffiness
+      </label><br>
+      <label>
+        <input type="radio" name="fav-thing" value="licks">licks
+      </label><br>
+      <label>
+        <input type="radio" name="fav-thing" value="splooting">splooting
+      </label><br>
+      <label>
+        <input type="radio" name="fav-thing" value="tricks">tricks
+      </label>
+      <br><br>
+      <label for="comments">Additional things you like about Beau:</label><br>
+      <textarea name="comments" rows="9" cols="30" id="comments" placeholder="Enter your comment here..." onfocus="toggleComments()" onblur="toggleComments()">
+      </textarea>
+      <br><br>
+      <button id="submit" type="submit" alt="submit">submit</button>
+    
+    </form>
+    </div>
+</body>
+</html>

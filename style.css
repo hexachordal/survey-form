@@ -1,0 +1,62 @@
+body{
+    background-image: linear-gradient(rgba(355,355,355,0.4), rgba(355,355,355,0.4)),url("https://thehappypuppysite.com/wp-content/uploads/2019/08/Border-Collie-Lab-Mix-HP-long.jpg");
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  
+  div {
+    font-size: 20px;
+    left: 12.5%;
+    position: relative;
+    text-align:center;
+    display: flex;
+    width: 75%;
+    background-color: rgba(145,27,0,0.2);
+    height: auto;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 850px) {
+    #title{
+      font-size: 25px;
+    }
+    div{
+      font-size: 15px;
+      left: 10%;
+      position: relative;
+      text-align:center;
+      display: flex;
+      width: 80%;
+      background-color: rgba(145,27,0,0.2);
+      height: auto;
+      flex-direction: column;
+    }
+  }
+  
+  #title {
+    background-image: radial-gradient(circle, maroon, darkkhaki, transparent);
+    position: sticky;
+    width: 100%;
+    height: auto;
+    top: 0;
+  }
+  
+  #name,#email,#number,#dropdown {
+    width: 60%;
+    padding: 12px 20px
+  }
+  
+  #beau-knows {
+  
+  }
+  #comments{
+    width: 60%;
+  }
+  
+  
